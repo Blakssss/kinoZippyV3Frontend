@@ -1,0 +1,51 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    height: 100%;
+    table-layout: fixed;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #00cf45;
+}
+
+h1 {
+    color: green;
+}
+
+.inputfield {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #555;
+    border-radius: 4px;
+}
+
+
+.buttondelete {
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    color: #fff;
+    background-color:#0a0a23;
+}
+
+.buttonupdate {
+    border-radius:10px;
+    padding:5px;
+    color: #fff;
+    background-color: #2121cb;
+}
+
+.xbutton {
+    position: absolute;
+    top:50%
+}

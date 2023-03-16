@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new user</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<h1>Insert user</h1>
+<div>
+  <form action="http://localhost:8080/user" method="post" id="formUser">
+    <div>
+      <label for="inpName">name</label>
+      <input
+        type="text"
+        name="username"
+        class="inputfield"
+        placeholder="eks. kasper"
+        id="inpName"
+      >
+    </div>
+    <div>
+      <label for="inpPassword">password</label>
+      <input
+              type="text"
+              name="password"
+              class="inputfield"
+              placeholder="eks. password"
+              id="inpPassword"
+      >
+    </div>
+    <button type="submit" title="Gem" id="submit">Opret</button>
+  </form>
+</div>
+<script src="../js/formUser.js"></script>
+</body>
+</html>
