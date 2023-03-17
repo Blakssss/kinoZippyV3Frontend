@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Log-In</title>
+    <meta charset="UTF-8">
+    <title>Log-In</title>
 
 </head>
 <body>
 
 <h1>Opret ny bruger</h1>
+<form action="http://localhost:8080/user" method="post" id="createUser">
+    <label>Brugernavn: <br>
+        <input type="text" id="newUsername" name="username">
+    </label>
+    <br>
+    <label>
+        Adgangskode: <br>
+        <input type="text" id="newPassword" name="password">
+    </label>
 
-<label>Brugernavn: <br>
-  <input type="text" id="newUsername">
-</label>
-<br>
-<label>
-  Adgangskode: <br>
-  <input type="text" id="newPassword">
-</label>
+    <button id="newUserBtn">Opret ny bruger</button>
 
-<button id="newUserBtn">Opret ny bruger</button>
+    <button onclick="getUsers()">Fetch all users</button>
+</form>
+<script src="../js/formUser.js"></script>
 
 </body>
 
-<script src="../../js/userLogin.js"></script>
+<!--
+<script>
+
+    /*async function request(endpoint, options) {
+        const response = await fetch(endpoint, options);
+        if (response.ok) callback(await response.json());
+        else error(await response);
+    }*/
+
+    async function getUsers() {
+        const options = {
+            method: "GET",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        };
+        const response = await fetch("http://localhost:8080/users", options);
+        if (response.ok)  {
+            const members = await response.json();
+            console.log(members);
+            for (let i = 0; i < members.length; i++) {
+                console.log(members[i]);
+            }
+        } else {
+            alert(await response);
+        }
+    }
+
+</script>
+
+<script src="../../js/fetchUser.js" type="application/javascript"></script>
+-->
 </html>

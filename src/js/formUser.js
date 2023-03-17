@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', createFormEventListener);
 let formUser;
 
 function createFormEventListener(){
-    formUser = document.getElementById("formUser");
+    formUser = document.getElementById("createUser");
     formUser.addEventListener("submit", handleFormSubmit);
 }
 
