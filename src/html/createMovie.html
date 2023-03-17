@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log-In</title>
+
+</head>
+<body>
+
+<h1>Create new movie</h1>
+<form action="http://localhost:8080/movie" method="post" id="createMovie">
+  <label>Title: <br>
+    <input type="text" id="newTitle" name="title">
+  </label>
+  <br>
+  <label>
+    Release Date: <br>
+    <input type="text" id="newReleaseDate" name="releaseDate">
+  </label>
+  <br>
+  <label>
+    Rating: <br>
+    <input type="text" id="newRating" name="rating">
+  </label>
+  <br>
+  <label>
+    length: <br>
+    <input type="text" id="newLength" name="length">
+  </label>
+  <br>
+  <label>
+    genre: <br>
+    <input type="text" id="newGenre" name="genre">
+  </label>
+  <br>
+  <label>
+    Age Limit: <br>
+    <input type="text" id="newAgeLimit" name="ageLimit">
+  </label>
+
+  <button id="newMovieBtn">Create new movie</button>
+
+</form>
+
+<script src="../js/formMovie.js"></script>
+
+</body>

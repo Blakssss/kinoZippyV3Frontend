@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="hej">
+    <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="vi kan nu create user fra front end">
+      <change afterPath="$PROJECT_DIR$/src/html/createMovie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/movieTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/fetchMovie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/formMovie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/createUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/formkommune.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/userTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/userTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/fetchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fetchUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/formUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/formUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
       <list>
         <option value="package.json" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678974396088</updated>
-      <workItem from="1678974397329" duration="17445000" />
+      <workItem from="1678974397329" duration="20624000" />
     </task>
     <task id="LOCAL-00001" summary="hej">
       <created>1678978391593</created>
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679040901528</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="vi kan nu create user fra front end">
+      <created>1679060218731</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679060218732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hej" />
-    <option name="LAST_COMMIT_MESSAGE" value="hej" />
+    <MESSAGE value="vi kan nu create user fra front end" />
+    <option name="LAST_COMMIT_MESSAGE" value="vi kan nu create user fra front end" />
   </component>
 </project>
