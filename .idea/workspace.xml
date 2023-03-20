@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="Lavet frontend til user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/userTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/userTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/fetchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fetchUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/movieTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/movieTable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/fetchMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fetchMovie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <workItem from="1679228786010" duration="643000" />
       <workItem from="1679299614995" duration="846000" />
       <workItem from="1679303082226" duration="3147000" />
-      <workItem from="1679306980541" duration="6010000" />
+      <workItem from="1679306980541" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="hej">
       <created>1678978391593</created>
@@ -116,14 +116,7 @@
       <option name="project" value="LOCAL" />
       <updated>1679303292115</updated>
     </task>
-    <task id="LOCAL-00007" summary="Lavet frontend til user">
-      <created>1679308720848</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1679308720848</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +127,6 @@
     <MESSAGE value="vi kan nu create user fra front end" />
     <MESSAGE value="vi kan nu create movies fra front end" />
     <MESSAGE value="rename formUser til createUser" />
-    <MESSAGE value="Lavet frontend til user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lavet frontend til user" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename formUser til createUser" />
   </component>
 </project>
