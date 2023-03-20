@@ -1,5 +1,6 @@
 console.log("vi er i fetchregioner")
 const urlUsers = "http://localhost:8080/users"
+const deleteUserURL = "http://localhost:8080/deleteUser"
 
 
 //fetchany tager fat i users og laver dem til en JSON
@@ -11,8 +12,8 @@ function fetchAny(url) {
 const tableUsers = document.getElementById("tableUsers")
 
 const pbCreateTable = document.getElementById("pbCreateTable")
-const pbDeleteUser = document.getElementById("pbDeleteUser")
-const pbUpdateUser = document.getElementById("pbUpdateUser")
+const pbDeleteUser = document.getElementById("modalBtnDelete")
+const pbUpdateUser = document.getElementById("modalBtnUpdate")
 
 function createTable(user) {
     console.log(user.username)
@@ -44,27 +45,30 @@ function updateUser() {
 
 }
 
-function deleteUser() {
-    async function deleteCustomer(customer, usernameInp, passwordInp) {
+async function deleteUser() {
 
-        let body = {
-            "customerId": customer.customerId,
-            "inpUsername": usernameInp.value,
-            "inpPassword": passwordInp.value
-        }
+    const userid = document.getElementById("modal-userId").value
 
-        const deleteReq = {
-            method: "DELETE",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(customer)
-        }
-
-        await fetch(deleteCustomerURL + "/" + customer.customerId, deleteReq).catch((error) => console.log(error));
-
+    const deleteReq = {
+        method: "DELETE",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({})
     }
+
+    const response = await fetch(deleteUserURL + "/" + userid, deleteReq).catch((error) => console.log(error));
+    console.log(response)
+    return response
 }
+/*
+function actionDeleteUser() {
+    const userid = document.getElementById("modal-userId").value
+    console.log(userid)
+    const responseDeleteUser = deleteUser(userid)
+    console.log(responseDeleteUser)
+}
+*/
 
 pbCreateTable.addEventListener("click", actionShowUsers)
 pbUpdateUser.addEventListener("click", updateUser)
