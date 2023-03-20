@@ -1,12 +1,12 @@
-console.log("Vi er i formUser")
+console.log("Vi er i createUser")
 const userUrl = "http://localhost:8080/user";
 
 document.addEventListener('DOMContentLoaded', createFormEventListener);
-let formUser;
+let createUser;
 
 function createFormEventListener(){
-    formUser = document.getElementById("createUser");
-    formUser.addEventListener("submit", handleFormSubmit);
+    createUser = document.getElementById("createUser");
+    createUser.addEventListener("submit", handleFormSubmit);
 }
 
 async function handleFormSubmit(event) {
@@ -14,7 +14,7 @@ async function handleFormSubmit(event) {
     event.preventDefault();
 
     try {
-        const formData = new FormData(formUser)
+        const formData = new FormData(createUser)
 
         const responseData = await postFormData(userUrl, formData)
         console.log(responseData);
