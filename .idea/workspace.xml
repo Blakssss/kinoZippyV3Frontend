@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="Lavet frontend til user">
+    <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="vi kan fetch og vise showings nu">
+      <change afterPath="$PROJECT_DIR$/src/html/showingTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/fetchShowing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/movieTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/movieTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/fetchMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fetchMovie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/showSeats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/showSeats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/fetchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fetchUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/selectSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/selectSeat.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679303292115</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vi kan fetch og vise showings nu">
+      <created>1679314306093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679314306093</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +137,7 @@
     <MESSAGE value="vi kan nu create user fra front end" />
     <MESSAGE value="vi kan nu create movies fra front end" />
     <MESSAGE value="rename formUser til createUser" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename formUser til createUser" />
+    <MESSAGE value="vi kan fetch og vise showings nu" />
+    <option name="LAST_COMMIT_MESSAGE" value="vi kan fetch og vise showings nu" />
   </component>
 </project>

@@ -8,7 +8,7 @@
     <title>Movie Seat Booking</title>
 </head>
 <body>
-<form action="http://localhost:8080/showing" method="post" id="createShowing">
+<form action="http://localhost:8080/booking" method="post" id="createBooking">
     <label>Brugernavn: <br>
         <input type="text" id="newUsername" name="username">
     </label>
@@ -17,9 +17,9 @@
     <label> Select a movie:</label>
     <select id="movie">
         <option value="Godzilla">Godzilla(KR.120)</option>
-        <option value="115">Mein Kampf (KR.115)</option>
-        <option value="100">Spice Girls (KR.100)</option>
-        <option value="100">Inception (KR.100)</option>
+        <option value="Teletubbies">Teletubbies(KR.115)</option>
+        <option value="DRUK">DRUK(KR.100)</option>
+        <option value="Inception">Inception(KR.100)</option>
     </select>
 </div>
 
@@ -41,67 +41,68 @@
     <div class="screen"></div>
 
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-    </div>
-
-    <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div id="a1" class="seat"></div>
+        <div id="a2" class="seat"></div>
+        <div id="a3" class="seat"></div>
+        <div id="a4" class="seat sold"></div>
+        <div id="a5" class="seat sold"></div>
+        <div id="a6" class="seat"></div>
+        <div id="a7" class="seat"></div>
+        <div id="a8" class="seat"></div>
     </div>
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
+        <div id="b1" class="seat"></div>
+        <div id="b2" class="seat"></div>
+        <div id="b3" class="seat"></div>
+        <div id="b4" class="seat sold"></div>
+        <div id="b5" class="seat sold"></div>
+        <div id="b6" class="seat"></div>
+        <div id="b7" class="seat"></div>
+        <div id="b8" class="seat"></div>
     </div>
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div id="c1" class="seat"></div>
+        <div id="c2" class="seat"></div>
+        <div id="c3" class="seat"></div>
+        <div id="c4" class="seat sold"></div>
+        <div id="c5" class="seat sold"></div>
+        <div id="c6" class="seat"></div>
+        <div id="c7" class="seat"></div>
+        <div id="c8" class="seat"></div>
     </div>
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div id="d1" class="seat"></div>
+        <div id="d2" class="seat"></div>
+        <div id="d3" class="seat"></div>
+        <div id="d4" class="seat sold"></div>
+        <div id="d5" class="seat sold"></div>
+        <div id="d6" class="seat"></div>
+        <div id="d7" class="seat"></div>
+        <div id="d8" class="seat"></div>
     </div>
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-        <div class="seat"></div>
+        <div id="e1" class="seat"></div>
+        <div id="e2" class="seat"></div>
+        <div id="e3" class="seat"></div>
+        <div id="e4" class="seat sold"></div>
+        <div id="e5" class="seat sold"></div>
+        <div id="e6" class="seat"></div>
+        <div id="e7" class="seat"></div>
+        <div id="e8" class="seat"></div>
+    </div>
+    <div class="row">
+        <div id="f1" class="seat"></div>
+        <div id="f2" class="seat"></div>
+        <div id="f3" class="seat"></div>
+        <div id="f4" class="seat sold"></div>
+        <div id="f5" class="seat sold"></div>
+        <div id="f6" class="seat"></div>
+        <div id="f7" class="seat"></div>
+        <div id="f8" class="seat"></div>
     </div>
 </div>
+    <button id="pbCreateBooking">Create booking</button>
+
 </form>
 
 <p class="text">

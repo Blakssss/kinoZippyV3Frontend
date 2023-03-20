@@ -15,19 +15,24 @@ const pbCreateTable = document.getElementById("pbCreateTable")
 const pbDeleteUser = document.getElementById("modalBtnDelete")
 const pbUpdateUser = document.getElementById("modalBtnUpdate")
 
+let isExecuted = false;
 function createTable(user) {
-    console.log(user.username)
+    if(!isExecuted) {
 
-    let cellCount = 0
-    let rowCount = tableUsers.rows.length
-    console.log(rowCount)
-    let row = tableUsers.insertRow(rowCount)
-    row.id = user.username;
 
-    let cell = row.insertCell(cellCount++)
-    cell.innerHTML = user.username;
-    cell = row.insertCell(cellCount++)
-    cell.innerHTML = user.password;
+        console.log(user.username)
+
+        let cellCount = 0
+        let rowCount = tableUsers.rows.length
+        console.log(rowCount)
+        let row = tableUsers.insertRow(rowCount)
+        row.id = user.username;
+
+        let cell = row.insertCell(cellCount++)
+        cell.innerHTML = user.username;
+        cell = row.insertCell(cellCount++)
+        cell.innerHTML = user.password;
+    }
 }
 
 let lstUsers = []
@@ -37,6 +42,7 @@ async function actionShowUsers() {
     lstUsers = await fetchAny(urlUsers);
     console.log("fetch any gik fint")
     lstUsers.forEach(createTable)
+    isExecuted = true;
     console.log("createtable gik fint")
     console.log(lstUsers)
 }

@@ -3,7 +3,7 @@ const seats = document.querySelectorAll(".row .seat:not(.sold)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
-const showingUrl = "http://localhost:8080/showing";
+const showingUrl = "http://localhost:8080/booking";
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 
 populateUI();
@@ -11,18 +11,14 @@ populateUI();
 let ticketPrice = +movieSelect.value;
 let formShowing;
 function createFormEventListener(){
-    formShowing = document.getElementById("createShowing");
+    formShowing = document.getElementById("createBooking");
     formShowing.addEventListener("submit", handleFormSubmit);
 }
 async function handleFormSubmit(event) {
 
-    event.preventDefault();
-
     try {
         const formData = new FormData(formShowing)
-
         const responseData = await postFormData(showingUrl, formData)
-        console.log(responseData);
     } catch (error) {
         alert(error.message)
 
