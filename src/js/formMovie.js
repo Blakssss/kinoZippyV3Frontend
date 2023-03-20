@@ -41,3 +41,48 @@ async function postFormData(url, formData) {
     const response = await fetch(url, fetchOptions)
     return response;
 }
+
+
+
+async function deleteMovie() {
+    const deleteForm = document.getElementById("deleteMovieForm");
+    const formData = new FormData(deleteForm);
+
+    const url = movieUrl + "/" + formData.get("id");
+    const fetchOptions = {
+        method: "DELETE",
+        mode: 'cors'
+    }
+
+    try {
+        const response = await fetch(url, fetchOptions);
+        console.log(response);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function updateMovie() {
+    const updateForm = document.getElementById("updateMovieForm");
+    const formData = new FormData(updateForm);
+
+    const url = movieUrl + "/" + formData.get("id");
+    const plainFormData = Object.fromEntries(formData.entries())
+    const formDataJsonString = JSON.stringify(plainFormData);
+
+    const fetchOptions = {
+        method: "PUT",
+        mode: 'cors',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: formDataJsonString
+    }
+
+    try {
+        const response = await fetch(url, fetchOptions);
+        console.log(response);
+    } catch (error) {
+        alert(error.message);
+    }
+}

@@ -42,6 +42,48 @@
 
 </form>
 
+<h1>Delete Movie</h1>
+<form method="post" action="/movie/delete">
+  <label for="id">Movie ID:</label>
+  <input type="text" id="id" name="id">
+  <button type="submit">Delete</button>
+</form>
+<br>
+
+<h1>Update Movie</h1>
+<form method="put" action="/movie">
+  <label>Title: <br>
+    <input type="text" id="newTitle" name="title">
+  </label>
+  <br>
+  <label>
+    Release Date: <br>
+    <input type="text" id="newReleaseDate" name="releaseDate">
+  </label>
+  <br>
+  <label>
+    Rating: <br>
+    <input type="text" id="newRating" name="rating">
+  </label>
+  <br>
+  <label>
+    length: <br>
+    <input type="text" id="newLength" name="length">
+  </label>
+  <br>
+  <label>
+    genre: <br>
+    <input type="text" id="newGenre" name="genre">
+  </label>
+  <br>
+  <label>
+    Age Limit: <br>
+    <input type="text" id="newAgeLimit" name="ageLimit">
+  </label>
+  <button type="submit">Update</button>
+</form>
+
+
 <script src="../js/formMovie.js"></script>
 
 </body>

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="vi kan nu create movies fra front end">
-      <change afterPath="$PROJECT_DIR$/src/css/theaterHall.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/showSeats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/selectSeat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/createMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/createMovie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/formMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/formMovie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
