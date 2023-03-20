@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="vi kan nu create movies fra front end">
+      <change afterPath="$PROJECT_DIR$/src/html/updateAndDeleteMovie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/createMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/createMovie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/formMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/formMovie.js" afterDir="false" />
@@ -19,8 +20,8 @@
       <list>
         <option value="package.json" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,6 +72,7 @@
       <workItem from="1678974397329" duration="27347000" />
       <workItem from="1679228786010" duration="643000" />
       <workItem from="1679299614995" duration="846000" />
+      <workItem from="1679308599550" duration="1959000" />
     </task>
     <task id="LOCAL-00001" summary="hej">
       <created>1678978391593</created>

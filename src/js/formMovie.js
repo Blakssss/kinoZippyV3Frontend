@@ -4,6 +4,12 @@ const movieUrl = "http://localhost:8080/movie";
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 let formMovie;
 
+const deleteBtn = document.getElementById("deleteMovieBtn");
+deleteBtn.addEventListener("submit", deleteMovie);
+
+const updateBtn = document.getElementById("updateMovieBtn");
+updateBtn.addEventListener("submit", updateMovie);
+
 function createFormEventListener(){
     formMovie = document.getElementById("createMovie");
     formMovie.addEventListener("submit", handleFormSubmit);
@@ -41,8 +47,6 @@ async function postFormData(url, formData) {
     const response = await fetch(url, fetchOptions)
     return response;
 }
-
-
 
 async function deleteMovie() {
     const deleteForm = document.getElementById("deleteMovieForm");
