@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Find tabel med users</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <title>Find tabel med users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 </head>
 <body>
-<h1>users</h1>
-<button id="pbCreateTable">create table of users</button>
-<br>
-<br>
-<div>
-  <table class="table" id="tableUsers">
-    <tr style="color:white; background-color: black">
-      <th>username</th>
-      <th>password</th>
-    </tr>
-  </table>
+<div class="container">
+    <h1>User control webpage</h1>
+    <br>
+
+    <button class="btn btn-primary" id="pbCreateTable">See users</button>
+
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#btnUpdateModal" id="pbDeleteUser">Update user
+
+    </button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#btnDeleteModal" id="pbUpdateUser">Delete
+        user
+    </button>
+
+
+    <!-- Modal for DELETE-->
+    <div class="modal fade" id="btnDeleteModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Delete user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Input the users ID to delete them from the system.
+                    </p>
+                    <label for="modal-userId" class="form-label"></label>
+                    <input type="email" class="form-control" id="modal-userId" placeholder="Input user id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for UPDATE-->
+    <div class="modal fade" id="btnUpdateModal" tabindex="-1" aria-labelledby="modalTitle2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle2">Update user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        First input the users ID so we can find them. Then we can update their information.
+                    </p>
+                    <label for="modal-userId" class="form-label"></label>
+                    <input type="email" class="form-control" id="modal-userId2" placeholder="Input user id">
+                    <label for="modal-userId" class="form-label"></label>
+                    <input type="text" class="form-control" id="modal-userName" placeholder="Input new username">
+                    <label for="modal-userId" class="form-label"></label>
+                    <input type="text" class="form-control" id="modal-userPassword" placeholder="Input new password">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <div>
+        <table class="table" id="tableUsers">
+            <tr style="color:white; background-color: black">
+                <th>username</th>
+                <th>password</th>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <script src="../js/fetchUser.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>
 </html>
