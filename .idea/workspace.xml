@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="tingeling">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/css/Stylesheet.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/css/nav_stylesheet.css" afterDir="false" />
@@ -18,6 +19,12 @@
       <change afterPath="$PROJECT_DIR$/src/html/homePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/movieTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/movieTable.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/html/updateMovie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/fetchMoviesLocal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/updateMovie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -87,6 +94,11 @@
       <workItem from="1679299614995" duration="846000" />
       <workItem from="1679303082226" duration="3147000" />
       <workItem from="1679306980541" duration="1656000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1679392082858" duration="1586000" />
+      <workItem from="1679396650336" duration="2169000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="hej">
       <created>1678978391593</created>
