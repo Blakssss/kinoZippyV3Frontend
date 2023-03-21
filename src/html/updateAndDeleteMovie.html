@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+<h1>Delete Movie</h1>
+<form action="http://localhost:8080/movie" method="delete" id="deleteMovie">
+  <label for="title">Movie title:</label>
+  <input type="text" id="title" name="title">
+  <button id="deleteMovieBtn">Delete movie</button>
+</form>
+<br>
+
+<h1>Update Movie</h1>
+<form action="http://localhost:8080/movie" method="put" id="updateMovie">
+  <label>Title: <br>
+    <input type="text" id="newTitleUpdate" name="title">
+  </label>
+  <br>
+  <label>
+    Release Date: <br>
+    <input type="text" id="newReleaseDateUpdate" name="releaseDate">
+  </label>
+  <br>
+  <label>
+    Rating: <br>
+    <input type="text" id="newRatingUpdate" name="rating">
+  </label>
+  <br>
+  <label>
+    length: <br>
+    <input type="text" id="newLengthUpdate" name="length">
+  </label>
+  <br>
+  <label>
+    genre: <br>
+    <input type="text" id="newGenreUpdate" name="genre">
+  </label>
+  <br>
+  <label>
+    Age Limit: <br>
+    <input type="text" id="newAgeLimitUpdate" name="ageLimit">
+  </label>
+  <button id="updateMovieBtn">Update movie</button>
+</form>
+
+
+<script src="../js/formMovie.js"></script>
+
+</body>
+</html>
