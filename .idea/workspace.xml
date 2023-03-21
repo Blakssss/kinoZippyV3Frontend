@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58347f32-d1e0-42d0-aaec-2de689fce047" name="Changes" comment="tingeling">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/Stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/nav_stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/KinoZippyLogo 320x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/KinoZippyLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/KinoZippyLogoSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/SO-60035_bd-w-mediumhigh_orig_1647352743595.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/star-wars-the-last-jedi-2017-movie-poster-red.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/wallpapersden.com_dune-hd-2021-movie-poster_2560x1080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/Img/wallpapersden.com_poster-of-john-wick-3_2560x1080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/homePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/updateDelete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/updateDelete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/movieTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/movieTable.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +46,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mathi/IdeaProjects/kinoZippyV3Frontend/kinoZippyV3Frontend/src/html&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Marcus/Desktop/Datamatiker/Opgaver/kinoZippyV3Frontend/src/Img",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marcus\Desktop\Datamatiker\Opgaver\kinoZippyV3Frontend\src\Img" />
       <recent name="C:\Users\mathi\IdeaProjects\kinoZippyV3Frontend\kinoZippyV3Frontend\src\html" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marcus\Desktop\Datamatiker\Opgaver\kinoZippyV3Frontend\src\html" />
+      <recent name="C:\Users\Marcus\Desktop\Datamatiker\Opgaver\kinoZippyV3Frontend\src\Img" />
       <recent name="C:\Users\mathi\IdeaProjects\kinoZippyV3Frontend\kinoZippyV3Frontend\src\js" />
     </key>
   </component>
@@ -73,7 +87,6 @@
       <workItem from="1679299614995" duration="846000" />
       <workItem from="1679303082226" duration="3147000" />
       <workItem from="1679306980541" duration="1656000" />
-      <workItem from="1679392082858" duration="1586000" />
     </task>
     <task id="LOCAL-00001" summary="hej">
       <created>1678978391593</created>

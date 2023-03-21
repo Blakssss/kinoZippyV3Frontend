@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Find tabel med users</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <h1>Movies</h1>
 <button id="pbCreateTable">create table of movies</button>
 <br>
 <br>
-<div>
-    <table class="table" id="tableMovies">
+
+<div class="d-flex justify-content-center">
+    <div class="card-group custom-card-group">
+        <div class="card mx-2" style="width: 20rem;">
+            <img class="card-img-top" src="https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/959/40/SO-60035_bd-w-mediumhigh_orig_1647352743595.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 1.2rem;">Spiderman No way Home</h5>
+                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card mx-2" style="width: 20rem;">
+            <img class="card-img-top" src="https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/815/520/EG-18087_bd-w-mediumhigh_orig-1607066750309.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 1.2rem;">DRUK</h5>
+                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card mx-2" style="width: 20rem;">
+            <img class="card-img-top" src="https://hbomax-images.warnermediacdn.com/images/GYDbfcQGssU-dEAEAAAAI/tileburnedin?size=1280x720&partner=hbomaxcom&v=2fc69f3280b3af08740eae000744054b&host=art-gallery.api.hbo.com&language=da-dk&w=1280" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 1.2rem;">Inception</h5>
+                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container-sm">
+    <table class="table table-sm table-striped" id="tableMovies">
         <tr style="color:white; background-color: black">
             <th>Title</th>
             <th>Release Date</th>
@@ -21,6 +49,7 @@
             <th>Age Limit</th>
         </tr>
     </table>
+    </div>
 </div>
 
 <script src="../js/fetchMovie.js"></script>

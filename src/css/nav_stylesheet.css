@@ -1,0 +1,33 @@
+.currentMovies{
+    position: relative;
+    left: 70px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.showseats{
+    position: relative;
+    left: 70px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.showings{
+    position: relative;
+    left: 70px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.list{
+    margin-right: 55px;
+}
+
+.login{
+    font-size: 15px;
+}
+
+.signup{
+    font-size: 15px;
+
+}
