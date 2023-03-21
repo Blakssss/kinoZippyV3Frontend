@@ -9,17 +9,16 @@
 </head>
 <body>
 <form action="http://localhost:8080/booking" method="post" id="createBooking">
-    <label>Brugernavn: <br>
-        <input type="text" id="newUsername" name="username">
+    <label>Bruger ID: <br>
+        <input type="text" id="newUsername" name="user">
     </label>
     <br>
+    <input type="hidden" id="selectedSeats" name="seat">
 <div class="movie-container">
     <label> Select a movie:</label>
-    <select id="movie">
-        <option value="Godzilla">Godzilla(KR.120)</option>
-        <option value="Teletubbies">Teletubbies(KR.115)</option>
-        <option value="DRUK">DRUK(KR.100)</option>
-        <option value="Inception">Inception(KR.100)</option>
+    <select id="movie" name="showing">
+        <option value="1">Teletubbies(KR.115)</option>
+        <option value="2">DRUK(KR.100)</option>
     </select>
 </div>
 
@@ -101,7 +100,7 @@
         <div id="f8" class="seat"></div>
     </div>
 </div>
-    <button id="pbCreateBooking">Create booking</button>
+    <button onclick="createBooking()" id="pbCreateBooking">Create booking</button>
 
 </form>
 

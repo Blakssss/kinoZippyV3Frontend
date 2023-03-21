@@ -38,7 +38,6 @@ function createTable(showing) {
 
         console.log(lstShowings)
 
-        isExecuted = true
     }
 
 
@@ -47,6 +46,7 @@ function createTable(showing) {
 async function actionShowShowings() {
     lstShowings = await fetchAny(urlShowings);
     lstShowings.forEach(createTable)
+    isExecuted = true
 }
 const pbCreateTable = document.getElementById("pbCreateTable")
 pbCreateTable.addEventListener("click",actionShowShowings)

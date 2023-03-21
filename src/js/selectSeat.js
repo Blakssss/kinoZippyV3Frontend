@@ -4,26 +4,39 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 const showingUrl = "http://localhost:8080/booking";
+let selectedSeatsInput
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 
 populateUI();
 
 let ticketPrice = +movieSelect.value;
-let formShowing;
+
+let formShowing = document.getElementById('createBooking');
+const button = document.getElementById('pbCreateBooking');
+
+
+
 function createFormEventListener(){
-    formShowing = document.getElementById("createBooking");
+   formShowing = document.getElementById("createBooking");
     formShowing.addEventListener("submit", handleFormSubmit);
 }
-async function handleFormSubmit(event) {
 
+
+async function handleFormSubmit(event) {
+    event.preventDefault()
+
+    const data = { user: {} }
     try {
         const formData = new FormData(formShowing)
+        data.user.id = formData.get('id')
+
         const responseData = await postFormData(showingUrl, formData)
     } catch (error) {
         alert(error.message)
 
     }
 }
+
 async function postFormData(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries())
     console.log(plainFormData)
@@ -32,6 +45,7 @@ async function postFormData(url, formData) {
 
     const fetchOptions = {
         method: "POST",
+        mode: 'cors',
         headers: {
             "Content-Type": "application/json"
         },
@@ -42,7 +56,29 @@ async function postFormData(url, formData) {
     return response;
 }
 
+async function createNewBooking(seats) {
 
+
+
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: {}
+    }
+
+    fetchOptions.body = JSON.stringify(seats)
+    return await fetch(showingUrl, fetchOptions).then((response ) => response.json()).catch((error) => console.log(error))
+}
+
+button.addEventListener('click', (e) => {
+    const selectedSeats = document.querySelectorAll('.row .seat.selected');
+    const selectedSeatIds = Array.from(selectedSeats).map((seat) => seat.id);
+    const selectedSeatIdsString = selectedSeatIds.join(',');
+    selectedSeatsInput = document.getElementById('selectedSeats');
+    selectedSeatsInput.value = selectedSeatIdsString;
+});
 
 /////////////////////////////////////////////////////////////////////////
 // Save selected movie index and price
@@ -66,15 +102,15 @@ function updateSelectedCount() {
 
     setMovieData(movieSelect.selectedIndex, movieSelect.value);
 }
-
-let selectedSeats;
 // Get data from localstorage and populate UI
 function populateUI() {
-    selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+    const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
 
     if (selectedSeats !== null && selectedSeats.length > 0) {
         seats.forEach((seat, index) => {
             if (selectedSeats.indexOf(index) > -1) {
+
                 console.log(seat.classList.add("selected"));
             }
         });
@@ -95,6 +131,10 @@ movieSelect.addEventListener("change", (e) => {
     updateSelectedCount();
 });
 
+function createBooking() {
+let booking = createNewBooking(selectedSeatsInput)
+}
+
 // Seat click event
 container.addEventListener("click", (e) => {
     if (
@@ -109,3 +149,4 @@ container.addEventListener("click", (e) => {
 
 // Initial count and total set
 updateSelectedCount();
+
