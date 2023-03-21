@@ -1,21 +1,15 @@
 .currentMovies{
-    position: relative;
-    left: 70px;
-    padding-top: 20px;
+    transform: translate(10px, -5px);
     font-size: 20px;
 }
 
 .showseats{
-    position: relative;
-    left: 70px;
-    padding-top: 20px;
+    transform: translate(30px, -5px);
     font-size: 20px;
 }
 
 .showings{
-    position: relative;
-    left: 70px;
-    padding-top: 20px;
+    transform: translate(20px, -5px);
     font-size: 20px;
 }
 
@@ -24,10 +18,20 @@
 }
 
 .login{
-    font-size: 15px;
+    font-size: 18px;
+
 }
 
 .signup{
-    font-size: 15px;
+    font-size: 18px;
+
+}
+
+.createMovies{
+    transform: translate(79px,35px)
+}
+
+.buttonCard{
+    transform: translate(53px,5px)
 
 }

@@ -4,43 +4,125 @@
     <meta charset="UTF-8">
     <title>Find tabel med users</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/Stylesheet.css">
+    <link rel="stylesheet" href="../css/nav_stylesheet.css">
 </head>
 <body>
-<h1>Movies</h1>
-<button id="pbCreateTable">create table of movies</button>
+
+
+
+
+<nav class="navbar navbar-dark bg-black navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-header" href="homePage.html">
+            <img src="Img/KinoZippyLogoSmall.png" alt="Logo" width="200" height="70" class="d-inline-block align-text-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="list">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <div class="currentMovies">
+                            <a class="nav-link" href="movieTable.html">Current movies</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="showings">
+                            <a class="nav-link" href="showingTable.html">Showings</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="showseats">
+                            <a class="nav-link" href="showSeats.html">show seats</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right ms-auto">
+            <div class="signup">
+                <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            </div>
+            <div class="login">
+                <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </div>
+        </ul>
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+</nav>
+
+
+
 <br>
 <br>
 
+
 <div class="d-flex justify-content-center">
     <div class="card-group custom-card-group">
-        <div class="card mx-2" style="width: 20rem;">
+        <div class="card mx-5" style="width: 20rem;">
             <img class="card-img-top" src="https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/959/40/SO-60035_bd-w-mediumhigh_orig_1647352743595.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 1.2rem;">Spiderman No way Home</h5>
-                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+                <h5 class="card-title" style="font-size: 1.2rem;">IMDB Rating: 7/10</h5>
+                <h5 class="card-title" style="font-size: 1.2rem;">Movie Length: 2H:28min</h5>
+                <div class="buttonCard">
+                <a href="https://www.imdb.com/title/tt10872600/?ref_=nv_sr_srsg_1" class="btn btn-primary btn-sm mt-auto">Go to IMDB</a>
+                </div>
             </div>
         </div>
-        <div class="card mx-2" style="width: 20rem;">
+        <div class="card mx-5" style="width: 20rem;">
             <img class="card-img-top" src="https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/815/520/EG-18087_bd-w-mediumhigh_orig-1607066750309.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 1.2rem;">DRUK</h5>
-                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+                <h5 class="card-title" style="font-size: 1.2rem;">IMDB Rating: 9/10</h5>
+                <h5 class="card-title" style="font-size: 1.2rem;">Movie Length: 1H:57min</h5>
+
+                <div class="buttonCard">
+                <a href="https://www.imdb.com/title/tt10288566/" class="btn btn-primary btn-sm mt-auto">Go to IMDB</a>
+                </div>
             </div>
         </div>
-        <div class="card mx-2" style="width: 20rem;">
+        <div class="card mx-5" style="width: 20rem;">
             <img class="card-img-top" src="https://hbomax-images.warnermediacdn.com/images/GYDbfcQGssU-dEAEAAAAI/tileburnedin?size=1280x720&partner=hbomaxcom&v=2fc69f3280b3af08740eae000744054b&host=art-gallery.api.hbo.com&language=da-dk&w=1280" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title" style="font-size: 1.2rem;">Inception</h5>
-                <a href="#" class="btn btn-primary btn-sm mt-auto">Go somewhere</a>
+                <h5 class="card-title">Inception</h5>
+                <h5 class="card-title" style="font-size: 1.2rem;">IMDB Rating: 8.5/10</h5>
+                <h5 class="card-title" style="font-size: 1.2rem;">Movie Length: 2H:28min</h5>
+
+                <div class="buttonCard">
+                <a href="https://www.imdb.com/title/tt1375666/?ref_=fn_al_tt_1" class="btn btn-primary btn-sm mt-auto">Go to IMDB</a>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 
+<div class="createMovies">
+    <h1>Movies</h1>
+    <button id="pbCreateTable">create table of movies</button>
+</div>
+
+
+<br>
+<br>
+<br>
 
     <div class="container-sm">
     <table class="table table-sm table-striped" id="tableMovies">
-        <tr style="color:white; background-color: black">
+        <tr style="color:white; background-color: lightblue">
             <th>Title</th>
             <th>Release Date</th>
             <th>Rating</th>
