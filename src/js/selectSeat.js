@@ -41,6 +41,19 @@ async function postFormData(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries())
     console.log(plainFormData)
 
+ const userData = {
+        id: plainFormData.user_id, // set the id field in user object
+    };
+
+    const showingData = {
+        id: plainFormData.showing_id, // set the id field in showing object
+    };
+
+    const postData = {
+        user: userData,
+        showing: showingData,
+    };
+
     const formDataJsonString = JSON.stringify(plainFormData)
 
     const fetchOptions = {

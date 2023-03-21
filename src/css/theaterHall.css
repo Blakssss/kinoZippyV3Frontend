@@ -30,6 +30,9 @@ body {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    box-shadow: 0 0 30px #C0C0C0;
+    font-weight: 580;
+
 }
 
 .container {
@@ -49,10 +52,13 @@ body {
 
 .seat.selected {
     background-color: green;
+    box-shadow: 0 0 20px #C0C0C0;
 }
 
 .seat.sold {
     background-color: #fff;
+    box-shadow: 0 0 20px #C0C0C0;
+
 }
 
 .seat:nth-of-type(2) {
@@ -74,7 +80,6 @@ body {
 }
 
 .showcase {
-    background: rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     border-radius: 5px;
     color: #777;
@@ -104,6 +109,18 @@ body {
     margin: 15px 0;
     transform: rotateX(-48deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+#background-image {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    overflow: hidden;
+}
+
+#titanic {
+    width: 590px;
+    height: 690px;
 }
 
 p.text{
