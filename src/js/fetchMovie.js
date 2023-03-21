@@ -39,7 +39,6 @@ function createTable(movie) {
 
         console.log(lstMovies)
 
-        isExecuted = true
     }
 
 
@@ -48,6 +47,8 @@ function createTable(movie) {
 async function actionShowMovies() {
     lstMovies = await fetchAny(urlMovies);
     lstMovies.forEach(createTable)
+    isExecuted = true
+
 }
 const pbCreateTable = document.getElementById("pbCreateTable")
 pbCreateTable.addEventListener("click",actionShowMovies)

@@ -67,10 +67,10 @@ function updateSelectedCount() {
     setMovieData(movieSelect.selectedIndex, movieSelect.value);
 }
 
-
+let selectedSeats;
 // Get data from localstorage and populate UI
 function populateUI() {
-    const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+    selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
 
     if (selectedSeats !== null && selectedSeats.length > 0) {
         seats.forEach((seat, index) => {
