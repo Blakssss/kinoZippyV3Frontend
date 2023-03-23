@@ -25,48 +25,43 @@ function createFormEventListener(){
 async function handleFormSubmit(event) {
     event.preventDefault()
 
-    const data = { user: {} }
     try {
         const formData = new FormData(formShowing)
-        data.user.id = formData.get('id')
+        const plainFormData = Object.fromEntries(formData.entries())
+        const data = {
+            user: {
+                id: plainFormData.user
+            },
+            showing: {
+                id: plainFormData.showing
+            },
+            seat: plainFormData.selectedSeats
+        }
 
-        const responseData = await postFormData(showingUrl, formData)
+        const responseData = await postFormData(showingUrl, data)
     } catch (error) {
         alert(error.message)
-
     }
 }
 
-async function postFormData(url, formData) {
-    const plainFormData = Object.fromEntries(formData.entries())
-    console.log(plainFormData)
-
- const userData = {
-        id: plainFormData.user_id, // set the id field in user object
-    };
-
-    const showingData = {
-        id: plainFormData.showing_id, // set the id field in showing object
-    };
-
-    const postData = {
-        user: userData,
-        showing: showingData,
-    };
-
-    const formDataJsonString = JSON.stringify(plainFormData)
-
+async function postFormData(url, data) {
+    const body = JSON.stringify(data)
     const fetchOptions = {
         method: "POST",
         mode: 'cors',
         headers: {
             "Content-Type": "application/json"
         },
-        body: formDataJsonString
+        body: body
     }
-
     const response = await fetch(url, fetchOptions)
     return response;
+
+
+/*
+    const plainFormData = Object.fromEntries(formData.entries())
+    const formDataJsonString = JSON.stringify(plainFormData)
+*/
 }
 
 async function createNewBooking(seats) {
