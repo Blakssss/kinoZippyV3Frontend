@@ -3,61 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Log-In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
 <body>
-
-<h1>Opret ny bruger</h1>
-<form action="http://localhost:8080/user" method="post" id="createUser">
-    <label>Brugernavn: <br>
-        <input type="text" id="newUsername" name="username">
-    </label>
+<div class="container">
+    <h1>Opret ny bruger</h1>
     <br>
-    <label>
-        Adgangskode: <br>
-        <input type="text" id="newPassword" name="password">
-    </label>
 
-    <button id="newUserBtn">Opret ny bruger</button>
+    <form action="http://localhost:8080/user" method="post" id="createUser">
 
-    <button onclick="getUsers()">Fetch all users</button>
-</form>
+        <div class="col-3">
+            <label for="newUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" id="newUsername">
+        </div>
 
+        <div class="col-3">
+            <label for="newPassword" class="form-label">Password</label>
+            <input type="text" class="form-control" name="password" id="newPassword">
+        </div>
+        <br>
+
+        <button class="button btn btn-primary" id="createUserBtn">Opret ny bruger</button>
+
+    </form>
+</div>
 <script src="../js/createUser.js"></script>
+
 </body>
 
-<!--
-<script>
-
-    /*async function request(endpoint, options) {
-        const response = await fetch(endpoint, options);
-        if (response.ok) callback(await response.json());
-        else error(await response);
-    }*/
-
-    async function getUsers() {
-        const options = {
-            method: "GET",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        };
-        const response = await fetch("http://localhost:8080/users", options);
-        if (response.ok)  {
-            const members = await response.json();
-            console.log(members);
-            for (let i = 0; i < members.length; i++) {
-                console.log(members[i]);
-            }
-        } else {
-            alert(await response);
-        }
-    }
-
-</script>
-
-<script src="../../js/userTable.js" type="application/javascript"></script>
--->
 
 </html>

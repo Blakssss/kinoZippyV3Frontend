@@ -26,6 +26,7 @@ async function handleFormSubmit(event) {
 }
 async function postFormData(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries())
+    console.log("vi er er i 28")
     console.log(plainFormData)
 
     const formDataJsonString = JSON.stringify(plainFormData)
