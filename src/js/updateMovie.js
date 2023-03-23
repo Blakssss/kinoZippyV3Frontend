@@ -13,22 +13,40 @@ function createTable(movie) {
     row.id = movie.title;
 
     let cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.title
+    let inpTitle = document.createElement("input")
+    inpTitle.type = "text"
+    inpTitle.setAttribute("value", movie.title)
+    cell.appendChild(inpTitle)
 
     cell = row.insertCell(cellCount++)
-    cell.innerText = movie.ageLimit
+    let inpAgeLimit = document.createElement("input")
+    inpAgeLimit.type = "text"
+    inpAgeLimit.setAttribute("value", movie.ageLimit)
+    cell.appendChild(inpAgeLimit)
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.genre
+    let inpGenre = document.createElement("input")
+    inpGenre.type = "text"
+    inpGenre.setAttribute("value", movie.genre)
+    cell.appendChild(inpGenre)
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.length
+    let inpLength = document.createElement("input")
+    inpLength.type = "text"
+    inpLength.setAttribute("value", movie.length)
+    cell.appendChild(inpLength)
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.rating
+    let inpRating = document.createElement("input")
+    inpRating.type = "text"
+    inpRating.setAttribute("value", movie.rating)
+    cell.appendChild(inpRating)
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.releaseDate
+    let inpReleaseDate = document.createElement("input")
+    inpReleaseDate.type = "text"
+    inpReleaseDate.setAttribute("value", movie.releaseDate)
+    cell.appendChild(inpReleaseDate)
 
     //Update knap, sender movie til PUT
     cell = row.insertCell(cellCount++)
@@ -36,7 +54,12 @@ function createTable(movie) {
     pbUpdate.textContent = "Opdater"
     pbUpdate.className = "buttonupdate"
     pbUpdate.addEventListener('click', function () {
-        movie.hrefPhoto = inpHrefPhoto.value;
+        movie.title = inpTitle.value;
+        movie.ageLimit = inpAgeLimit.value;
+        movie.genre = inpGenre.value;
+        movie.length = inpLength.value;
+        movie.rating = inpRating.value;
+        movie.releaseDate = inpReleaseDate.value;
         updateMovie(movie)
     })
     cell.appendChild(pbUpdate)
@@ -60,14 +83,19 @@ async function deleteMovie(movie) {
 }
 
 async function updateMovie(movie) {
-    console.log(movie.hrefPhoto)
+    console.log(movie.title)
+    console.log(movie.ageLimit)
+    console.log(movie.genre)
+    console.log(movie.length)
+    console.log(movie.rating)
+    console.log(movie.releaseDate)
     console.log(movie)
     const response = await restUpdateMovie(movie)
     console.log(response)
 }
 
 async function restUpdateMovie(movie) {
-    const url = "http://localhost:8080/movie" + movie.title;
+    const url = "http://localhost:8080/movie";
     const fetchOptions = {
         method: "PUT",
         headers: {
@@ -82,10 +110,10 @@ async function restUpdateMovie(movie) {
     console.log(response);
     if (!response.ok) {
         console.log("Det gik ikke godt med update");
-    };
+    }
+
     return response;
 }
-
 
 
 function actionCreateTable() {
