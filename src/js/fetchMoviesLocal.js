@@ -5,10 +5,10 @@ function fetchAny(url) {
     console.log(url)
     return fetch(url).then((response) => response.json())
 }
-let lstKommuner = []
+let lstMovies = []
 async function actionFetchMovies() {
-    lstKommuner = await fetchAny(urlMovies);
-    lstKommuner.forEach(fillMovieDropDown)
+    lstMovies = await fetchAny(urlMovies);
+    lstMovies.forEach(fillMovieDropDown)
 }
 function fillMovieDropDown(movie) {
     //console.log(kom)
@@ -19,6 +19,6 @@ function fillMovieDropDown(movie) {
     ddMovies.appendChild(el)
 }
 
-const pbFetchKommuner = document.getElementById("pbFetchKommuner")
-pbFetchKommuner.addEventListener('click', actionFetchKommuner)
+const pbFetchMovies = document.getElementById("pbFetchMovies")
+pbFetchMovies.addEventListener('click', actionFetchMovies)
 

@@ -1,15 +1,15 @@
 console.log("vi er i updateMovie")
 
 const pbCreateTable = document.getElementById("pbCreateTable")
-const tblMovie = document.getElementById("tblMovie")
+const tblMovies = document.getElementById("tblMovies")
 
 function createTable(movie) {
     console.log(movie.title)
     if (!movie.title) return;
 
     let cellCount = 0
-    let rowCount = tableMovies.rows.length
-    let row = tableMovies.insertRow(rowCount)
+    let rowCount = tblMovies.rows.length
+    let row = tblMovies.insertRow(rowCount)
     row.id = movie.title;
 
     let cell = row.insertCell(cellCount++)
@@ -63,18 +63,18 @@ function createTable(movie) {
 
 }
 
-async function deleteKommune(movie) {
+async function deleteMovie(movie) {
     console.log("slet movie" + movie.title)
 }
 
 async function updateMovie(movie) {
     console.log(movie.hrefPhoto)
     console.log(movie)
-    const response = await restUpdateKommune(movie)
+    const response = await restUpdateMovie(movie)
     console.log(response)
 }
 
-async function restUpdateKommune(movie) {
+async function restUpdateMovie(movie) {
     const url = "http://localhost:8080/movie" + movie.title;
     const fetchOptions = {
         method: "PUT",
