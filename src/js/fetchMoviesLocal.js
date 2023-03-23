@@ -8,16 +8,8 @@ function fetchAny(url) {
 let lstMovies = []
 async function actionFetchMovies() {
     lstMovies = await fetchAny(urlMovies);
-    lstMovies.forEach(fillMovieDropDown)
 }
-function fillMovieDropDown(movie) {
-    //console.log(kom)
-    const el = document.createElement("option")
-    el.textContent = movie.title
-    el.value = movie.genre
-    el.region = movie
-    ddMovies.appendChild(el)
-}
+
 
 const pbFetchMovies = document.getElementById("pbFetchMovies")
 pbFetchMovies.addEventListener('click', actionFetchMovies)
