@@ -16,27 +16,19 @@ function createTable(movie) {
     cell.innerHTML = movie.title
 
     cell = row.insertCell(cellCount++)
-    let atag = document.createElement("a")
-    atag.setAttribute("href", movie.href)
-    atag.innerText = movie.title
-    cell.appendChild(atag)
+    cell.innerText = movie.ageLimit
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = movie.region.title
+    cell.innerHTML = movie.genre
 
     cell = row.insertCell(cellCount++)
-    let inpHrefPhoto = document.createElement("input")
-    inpHrefPhoto.type = "text"
-    inpHrefPhoto.setAttribute("value", movie.hrefPhoto)
-    cell.appendChild(inpHrefPhoto)
+    cell.innerHTML = movie.length
 
     cell = row.insertCell(cellCount++)
-    let img = document.createElement("img")
-    img.setAttribute("src", movie.hrefPhoto)
-    img.setAttribute("alt", "hej")
-    img.setAttribute("width", 150)
-    img.setAttribute("height", 150)
-    cell.appendChild(img)
+    cell.innerHTML = movie.rating
+
+    cell = row.insertCell(cellCount++)
+    cell.innerHTML = movie.releaseDate
 
     //Update knap, sender movie til PUT
     cell = row.insertCell(cellCount++)
