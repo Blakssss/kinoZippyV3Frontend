@@ -17,6 +17,7 @@ async function handleFormSubmit(event) {
         const formData = new FormData(createUser)
 
         const responseData = await postFormData(userUrl, formData)
+
         console.log(responseData);
     } catch (error) {
         alert(error.message)

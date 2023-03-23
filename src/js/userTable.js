@@ -1,8 +1,8 @@
 console.log("vi er i fetchregioner")
 const urlUsers = "http://localhost:8080/users"
 const deleteUserURL = "http://localhost:8080/deleteUser"
-const updateUserUrl = "http://localhost:8080/updateuser"
-
+const updateUserUrl = "http://localhost:8080/updateUser/"
+const createUserUrl = "http://localhost:8080/user";
 
 //fetchAny tager fat i users og laver dem til en JSON
 function fetchAny(url) {
@@ -50,24 +50,11 @@ function createTable(user) {
         pbUpdate.setAttribute('data-target', '#updateUserModal');
         pbUpdate.addEventListener('click', function () {
             $('#updateUserModal').modal('show');
-            // $('#hiddenUserId').value
+            // Vi har lavet en hidden id værdi i vores table, som ikke bliver vist i formen for brugeren,
+            // men som vi bruger til at få fat i id'et, så vi kan finde useren i DB ud fra id'et
             document.getElementById("hiddenUserId").value = user.id
         })
         cell.appendChild(pbUpdate)
-
-        /*
-        cell = row.insertCell(cellCount++)
-        let pbUpdate = document.createElement("button")
-        pbUpdate.textContent = "Update"
-        pbUpdate.id = "updateUserModal"
-        pbUpdate.className = "btn btn-primary"
-        pbUpdate.setAttribute('data-toggle', 'modal');
-        pbUpdate.setAttribute('data-target', '#myModal');
-        pbUpdate.addEventListener('click', function () {
-
-        })
-        cell.appendChild(pbUpdate)
-        */
 
         //Delete knap, sender User til DELETE
         cell = row.insertCell(cellCount++)
@@ -80,12 +67,8 @@ function createTable(user) {
             rowDelete.remove();
         })
         cell.appendChild(pbDelete)
-
-
     }
-    //
 }
-
 
 let lstUsers = []
 
@@ -98,8 +81,8 @@ async function actionShowUsers() {
     console.log("createtable gik fint")
     console.log(lstUsers)
 }
-// Update User
 
+// UPDATE USER
 const pbUpdateUser = document.getElementById("updateUserBtn")
 
 async function updateUser() {
@@ -134,8 +117,39 @@ async function updateUser() {
 }
 
 
-// update user ends
 
+// CREATE USER
+const pbCreateUser = document.getElementById("createUserBtnModal")
+
+async function createUser() {
+
+    let usernameCreate = document.getElementById("createUsername").value;
+    let passwordCreate = document.getElementById("createPassword").value;
+
+    await fetch(createUserUrl, {
+        method: 'POST',
+        body: JSON.stringify({ username: usernameCreate, password: passwordCreate }),
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            $('#createUserModal').modal('hide');
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+// DELETE USER
 async function deleteUser(userid) {
 
     const deleteReq = {
@@ -150,17 +164,10 @@ async function deleteUser(userid) {
     console.log(response)
     return response
 }
-/*
-function actionDeleteUser() {
-    const userid = document.getElementById("modal-userId").value
-    console.log(userid)
-    const responseDeleteUser = deleteUser(userid)
-    console.log(responseDeleteUser)
-}
-*/
 
+// EVENTS
 pbCreateTable.addEventListener("click", actionShowUsers)
 pbUpdateUser.addEventListener("click", updateUser)
 pbDeleteUser.addEventListener("click", deleteUser)
-
+pbCreateUser.addEventListener("click", createUser)
 
