@@ -1,10 +1,11 @@
+
 const container = document.querySelector(".container");
 const seats = document.querySelectorAll(".row .seat:not(.sold)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 const showingUrl = "http://localhost:8080/booking";
-let selectedSeatsInput
+let selectedSeatsInput;
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 
 populateUI();
@@ -54,8 +55,7 @@ async function postFormData(url, data) {
         },
         body: body
     }
-    const response = await fetch(url, fetchOptions)
-    return response;
+    return await fetch(url, fetchOptions);
 
 
 /*
@@ -66,18 +66,33 @@ async function postFormData(url, data) {
 
 async function createNewBooking(seats) {
 
+    const selectedSeats = [];
+    const seatElements = document.querySelectorAll(".seat");
+    for (let i = 0; i < seatElements.length; i++) {
 
+        if (seatElements[i].className.match(/selected/) &&
+            seatElements[i].id != '') {
+            selectedSeats.push(seatElements[i].id);
+        }
+    }
+
+    const data = {
+        userId: document.getElementById('newUsername').value,
+        showingId: document.getElementById('movie').value,
+        seat: selectedSeats.toString()
+       // seat: localStorage.getItem("selectedSeats")
+    }
 
     const fetchOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: {}
+        body: JSON.stringify(data)
     }
 
-    fetchOptions.body = JSON.stringify(seats)
-    return await fetch(showingUrl, fetchOptions).then((response ) => response.json()).catch((error) => console.log(error))
+    const response =  await fetch(showingUrl, fetchOptions);
+    console.log(await response.json());
 }
 
 button.addEventListener('click', (e) => {
@@ -87,6 +102,7 @@ button.addEventListener('click', (e) => {
     selectedSeatsInput = document.getElementById('selectedSeats');
     selectedSeatsInput.value = selectedSeatIdsString;
 });
+
 
 /////////////////////////////////////////////////////////////////////////
 // Save selected movie index and price
